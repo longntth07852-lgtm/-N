@@ -1,0 +1,264 @@
+/* =========================================
+   RESET CƠ BẢN & FONT CHỮ
+   ========================================= */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+body {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* =========================================
+   NÚT BẤM DÙNG CHUNG (BUTTONS)
+   ========================================= */
+.btn {
+    background-color: #2196F3; /* Màu xanh nước biển theo mockup */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+}
+.btn:hover {
+    background-color: #0b7dda;
+}
+
+/* =========================================
+   THANH ĐIỀU HƯỚNG (NAVBAR)
+   ========================================= */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    margin-bottom: 30px;
+    font-weight: bold;
+    font-size: 14px;
+}
+.navbar a {
+    text-decoration: none;
+    color: #000;
+}
+.navbar a:hover {
+    color: #2196F3;
+}
+
+/* =========================================
+   MÀN HÌNH ĐĂNG NHẬP (LOGIN)
+   ========================================= */
+.login-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+}
+.login-title {
+    font-size: 22px;
+    font-weight: normal;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 450px;
+}
+.form-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.form-row label {
+    font-size: 18px;
+    text-transform: uppercase;
+}
+.form-row input {
+    width: 250px;
+    padding: 12px;
+    border: 1px solid #000;
+}
+.login-btn-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.login-btn-container .btn {
+    padding: 12px 30px;
+    font-size: 16px;
+    border-radius: 8px;
+}
+.error-msg {
+    color: red;
+    text-align: center;
+    margin-top: -15px;
+    margin-bottom: 10px;
+    height: 20px;
+    font-weight: bold;
+}
+
+/* =========================================
+   LAYOUT QUẢN LÝ & CHI TIẾT (DÙNG CHUNG)
+   ========================================= */
+.container {
+    padding: 0 40px;
+    margin-bottom: 50px;
+}
+.page-title {
+    font-size: 24px;
+    font-weight: normal;
+    margin-bottom: 25px;
+}
+
+/* Header của bảng quản lý (Thanh search & Nút thêm) */
+.management-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 15px;
+}
+.search-box {
+    padding: 8px 12px;
+    border: 1px solid #000;
+    width: 250px;
+    border-radius: 3px;
+}
+.action-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+/* Bảng dữ liệu (Table) */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid #000;
+}
+table th, table td {
+    border: 1px solid #000;
+    padding: 12px;
+    text-align: center;
+    vertical-align: middle;
+}
+table th {
+    font-weight: bold;
+    font-size: 15px;
+    border-bottom: 2px solid #000;
+}
+table td {
+    font-size: 14px;
+}
+.icon-action {
+    color: #2196F3;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    letter-spacing: 3px;
+}
+.icon-action a {
+    text-decoration: none;
+    color: #2196F3;
+}
+
+/* =========================================
+   BỐ CỤC TRANG CHI TIẾT (3 CỘT)
+   ========================================= */
+.detail-layout {
+    display: flex;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+/* Cột 1: Avatar & Trạng thái */
+.avatar-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 160px;
+}
+.avatar-box {
+    width: 160px;
+    height: 180px;
+    border: 1px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.status-label {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+.status-box {
+    border: 1px solid #000;
+    padding: 8px;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* Cột 2: Form nhập liệu (Chia 2 cột nhỏ bằng Grid) */
+.form-section {
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px 30px;
+}
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+.input-group label {
+    margin-bottom: 5px;
+    font-size: 13px;
+}
+.input-group input,
+.input-group select {
+    padding: 10px;
+    border: 1px solid #000;
+    border-radius: 4px;
+    background-color: #fff;
+    font-size: 14px;
+}
+/* Ép thẻ input readonly giống y hệt thẻ thường nhưng không cho sửa */
+.input-group input[readonly] {
+    background-color: #f9f9f9;
+}
+.full-width {
+    grid-column: span 2;
+}
+
+/* Cột 3: Nút chức năng & Thẻ thông tin bên phải */
+.right-section {
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.right-section .btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 15px;
+}
+.info-card {
+    border: 1px solid #000;
+    border-radius: 20px;
+    padding: 25px 20px;
+    margin-top: 20px;
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.info-row {
+    display: flex;
+    justify-content: space-between;
+}
